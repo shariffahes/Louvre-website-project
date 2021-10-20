@@ -11,13 +11,33 @@
 
 <body>
     <div class="visit-page">
+        <div class="navBar">
+            <h2 class='title'> The Louvre <br> Museum </h2>
+            <a href="#" class="menu-button">Menu</a>
+            <table class="Menu">
+                <tr>
+                    <td><a href="./index.html">Home</a></td>
+                    <td><a href="./visit.html">Visit</a></td>
+                </tr>
+                <tr>
+                    <td><a href="./exhibition.html">Exhibition</a></td>
+                    <td><a href="">Contact US</a></td>
+                </tr>
+            </table>
+            <nav>
+                <a href="./index.html">Home</a>
+                <a href="./visit.html">Visit</a>
+                <a href="./exhibition.html">Exhibition</a>
+                <a href="">Contact US</a>
+            </nav>
+        </div>
         <div class="header">
             <h1>Visit</h1>
         </div>
         <div class="navBar">
-            <a href="#covid-section">Covid-19 regulations</a>
-            <a href="#admission-section">Hours & prices</a>
-            <a href="#map-section">Map & directions</a>
+            <a href="#covid-section" id="section1">Covid-19 regulations</a>
+            <a href="#admission-section" id="section2">Hours & prices</a>
+            <a href="#map-section" id="section3">Map & directions</a>
         </div>
         <div class="covid-regulations" id="covid-section">
             <h2 class="title">Covid-19 regulations</h2>
@@ -25,7 +45,7 @@
                 <p>Time-slot bookings are compulsory, including for free-admission visitors. In accordance with
                     government recommendations, all visitors to the Louvre aged 12 years and two months or older must
                     show a Health Pass. All visitors aged 11 and over must wear face masks.</p>
-                <iframe width="420" height="215" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY">
                 </iframe>
             </div>
         </div>
@@ -41,9 +61,10 @@
                 </div>
                 <div class="card ticket-prices">
                     <h3>Ticket Prices</h3>
-                    <p>17$</p>
-                    <p>18 years old - 26 years old residents of the EEA</p>
-                    <p>Free</p>
+                    <p> <span class="price-info">Free</span> for EEA residents aged between 18 - 26 years old</p>
+                    <p>
+                    <p> <span class="price-info">$17</span> for other visitors </p>
+                    </p>
                 </div>
             </div>
         </div>

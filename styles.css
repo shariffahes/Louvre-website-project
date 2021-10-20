@@ -1,0 +1,628 @@
+@font-face {
+    font-family: Carter;
+    src: url('./assets/fonts/CarterOne-Regular.ttf');
+}
+@font-face {
+    font-family: Acme;
+    src: url('./assets/fonts/Acme-Regular.ttf');
+}
+@font-face {
+    font-family: Montserrat;
+    src: url('./assets/fonts/Montserrat-Regular.ttf');
+}
+* {
+    margin: 0;
+    font-family: Acme;
+}
+h1 {
+    font-size: 35px;
+    padding: 12px;
+}
+p{
+    font-family: Montserrat;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    border-bottom-style: solid;
+    border-bottom-width:  2px;
+    color: gold;
+}
+
+
+.navBar {
+    display: flex;
+    position: relative;
+    background-color: black;
+    padding: 15px;
+    height: 55px;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+.navBar title {
+    font-family: Carter cursive;
+    font-size: 29px;
+}
+nav {
+    margin-left: 15px;
+}
+nav>a {
+    text-decoration: none;
+    margin-right: 12px;
+    color: white;
+    font-weight: bold;
+}
+.Menu {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    background-color: black;
+    visibility: hidden;
+    transition-property: visibility;
+    transition-delay: 450ms;
+}
+table a {
+    color: white;
+    display: inline-block;
+    width: 100%;
+}
+table td {
+    width: 50%;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    text-align: center;
+}
+.menu-button {
+    display: none;
+    color: white;
+}
+
+
+.first-section {
+    display: flex;
+    flex-direction: column;
+    background-image:   linear-gradient(
+      rgba(255, 255, 255,0), 
+      rgba(0, 0, 0, 0.6)
+    ), url('./assets/images/louvre-museum-paris-france.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-section .title {
+    color: white;
+    font-size: 37px;
+}
+.first-section .input {
+    border-width: 2px;
+    border: 2px solid #fff;
+    color: white;
+    background-color: transparent;
+    font-size: 20px;
+    margin-top: 5px;
+    padding: 8px;
+}
+.first-section .input:hover {
+    color: black;
+    background-color: white;
+}
+
+.event-section .grid-container {
+    display: grid;
+    margin: 8px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 480px;
+    gap: 18px;
+    justify-content: center;
+}
+.event-section .gridItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(240,240,240);
+    overflow: hidden;
+
+}
+.event-section h3 {
+    font-size: 26px;
+    padding: 12px;
+    height: 20%;
+}
+.event-section .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 15px;
+}
+.event-section .image {
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+.event-section .details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    height: 30%;
+}
+.book-now-button {
+    border-radius: 35px;
+    height: 70px;
+    width: 70px;
+    color: white;
+    border-width: 0px;
+}
+.event1 .special-words {
+    color: purple;
+}
+.event1 .book-now-button {
+    background-color: purple;
+}
+.event2 .special-words {
+    color: green;
+}
+.event2 .book-now-button {
+    background-color: green;
+}
+.event3 .special-words {
+    color: blue;
+}
+.event3 .book-now-button {
+    background-color: blue;
+}
+
+.gallery-section {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 25px 0px ;
+}
+.gallery-section  .gallery-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    gap: 5px;
+}
+.gallery-section .gallery-item { 
+    height: 300px;
+    background-color: red;
+    background-position: center;
+    background-size: cover;
+}
+.gallery-section #item1 {
+    background-color: blue;
+    background-image: url('https://images.unsplash.com/photo-1603966187872-3a0f1432057e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+    grid-area: 1 / 1 / 2 / 3;
+}
+.gallery-section #item2 {
+    background-color: cadetblue;
+    background-image: url('https://images.unsplash.com/photo-1593180318097-80afc542cfff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=872&q=80');
+    height: 600px;
+    grid-area: 1 / 3 / 3 / 4;
+}
+.gallery-section #item3 {
+    background-color: darkblue;
+    background-image: url('https://images.unsplash.com/photo-1545990569-98afd2e72852?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+    grid-area: 1 / 4 / 2 / 5;
+}
+.gallery-section #item4 {
+    background-color: rebeccapurple;
+    background-image: url('https://images.unsplash.com/photo-1531777319985-9dca28eeae64?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2038&q=80');
+}
+.gallery-section #item5 {
+    background-color: darkgoldenrod;
+    grid-area: 2 / 2 / 4 / 3;
+    background-image: linear-gradient( rgba(255, 255, 255,0), 
+      rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1581010864434-6ff1a9a2867e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80');
+    height: 600px;
+}
+.gallery-section #item6 {
+    background-color: aqua;
+    background-image:  url('https://images.unsplash.com/photo-1564586453511-3ff0c573ff4a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+}
+.gallery-section #item7 {
+    background-image: linear-gradient( rgba(255, 255, 255,0.2), 
+      rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1562754193-ba39a22c110b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2040&q=80');
+}
+.gallery-section #item8 {
+background-image: linear-gradient( rgba(255, 255, 255,0), 
+      rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1566998398519-7f10a1fa3af4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+ background-color: cornflowerblue;
+ grid-column: 3 / 5;
+}
+
+.email-section {
+    background-image: url(./assets/images/louvre.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.email-section .card {
+    display: flex;
+    height: 150px;
+    width: 500px;
+    background-color: gold;
+}
+.email-section .card .title {
+    background-color: rgb(240,240,240);
+    font-size: 25px;
+    padding: 10px;
+    text-align: center;
+}
+.email-section .card .content {
+    padding: 10px;
+    font-size: 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.selected-arts-section .arts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.selected-arts-section .art-item{
+    width:  80%;
+    background-color: rgb(240,240,240);
+    margin-bottom: 15px;
+    max-height: 200px;
+    overflow: hidden;
+}
+.selected-arts-section .art1{
+    display: flex;
+    justify-content: space-evenly;
+}
+.selected-arts-section .details{
+    padding: 10px;
+}
+.selected-arts-section .preview{
+    max-width: 300px;
+    min-width: 200px;
+}
+
+.footer{
+    background-color: black;
+    height: 250px;
+}
+
+.exhibition-page .grid-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2px;
+}
+.exhibition-page .grid-item {
+    background-color: blue;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    border-color: black;
+    border-width: 10px;
+}
+.exhibition-page .exhibition1 {
+    background-image: url(./assets/images/louvre.jpg);
+}
+.exhibition-page .exhibition2 {
+    background-image: url(./assets/images/sculpture.jpg);
+}
+.exhibition-page .exhibition3 {
+    background-image: url(./assets/images/sculpture.jpg);
+}
+.exhibition-page .exhibition4 {
+    background-image: url(./assets/images/sculpture.jpg);
+}
+.exhibition-page .exhibition5 {
+    background-image: url(./assets/images/sculpture.jpg);
+}
+.exhibition-page .exhibition6 {
+    background-image: url(./assets/images/sculpture.jpg);
+}
+.exhibition-page .exhibition7 {
+    background-image: url(./assets/images/sculpture.jpg);
+}
+.exhibition-page .exhibition8 {
+    background-image: url(./assets/images/sculpture.jpg);
+}
+.exhibition-page .exhibition9 {
+    background-image: url(./assets/images/sculpture.jpg);
+}
+.exhibition-page .exhibition10 {
+    background-image: url(./assets/images/sculpture.jpg);
+}
+.exhibition-page .grid-item {
+position: relative;
+}
+.exhibition-page .grid-item .details{
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+}
+
+.exhibition-page .grid-container .content {   
+    font-size: 32px;
+    color: sienna;
+    padding: 20px;
+
+}
+.exhibition-page .grid-container .details {   
+ border-color: black;
+ border-width: 10px;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ padding: 10px;
+}
+.exhibition-page .grid-container .details .title {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+.exhibition-page .grid-container .details .subtitle {
+    color: #999;
+    font-size: 12px;
+}
+
+.visit-page .header{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    background-image: url('./assets/images/louvre-visit.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: flex-end;
+    padding-bottom: 15px;
+    align-items: flex-start;
+}
+
+.visit-page .header h1, .contact-us-page .header h1 {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 50%;
+}
+.visit-page .title{
+    letter-spacing: 3px;
+    margin: 20px 0px 2px 15px;
+    font-size: 28px;
+}
+.visit-page .navBar {
+    background-color: black;
+}
+.covid-regulations .details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 14px;
+    min-width: 100px;
+}
+.covid-regulations .details iframe {
+    flex:  0.4;
+    min-height: 200px;
+}
+.covid-regulations .details p {
+    flex: 0.5;  
+}
+.visit-page .admission-info {
+    background-color: rgb(240,240,240);
+    padding: 5px;
+}
+.admission-info .content {
+    display: flex;
+    padding: 14px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.card {
+    background-color: white;
+    margin: 3px;
+    padding: 8px;
+    min-height: 150px;
+}
+.visit-page .opening-hours {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.visit-page .ticket-prices {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.visit-page .price-info {
+    margin-right: 3px;
+    font-size: 18px;
+}
+
+.map .details {
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.map .details p {
+    width: 40%;
+}
+.map-preview {
+    height: 250px;
+    width: 45%;
+    background-color: green;
+}
+
+.contact-us-page .header {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    background-image: url('./assets/images/about-us.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: flex-end;
+    padding-bottom: 15px;
+    align-items: flex-start;
+}
+
+.contact-us-page .info-section {
+    padding: 15px;
+}
+.contact-section {
+    padding: 15px;
+    background-color: rgb(240,240,240);
+    display: flex;
+    flex-direction: column;
+}
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+}
+.contact-section label {
+    font-size: 19px;
+}
+.contact-section input {
+    width: 100%;
+    height: 30px;
+    margin: 8px 0px;
+    font-size: 16px;
+}
+.contact-section .card {
+    margin: 15px;
+    width: 40%;
+    align-self: center;
+}
+.donate-section {
+    height: 200px;
+    display: flex;
+    background-image: linear-gradient(
+      rgba(0, 0, 0,0.3), 
+      rgba(0, 0, 0, 0.3)
+    ), url(./assets/images/louvre-museum-paris-france.jpg);
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+.donate-section h3 {
+    font-size: 30px;
+    flex: 0.5;
+ }
+ .donate-section .details {
+     flex: 0.5;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+ }
+.donate-section .details input {
+    padding: 8px;
+    font-size: 18px;
+    width: 50%;
+    border-width: 2px;
+    background-color: gold;
+    border-color: black;
+    margin: 10px;
+}
+.donate-section .details input:hover {
+    background-color: black;
+    color: white;
+}
+@media screen and (max-width: 700px) {
+    nav{
+        display: none;
+    }
+    .menu-button {
+        display: inline;
+    }
+    .menu-button:hover + .Menu {
+       visibility: visible;
+    }
+    .Menu:hover {
+        visibility: visible;
+    }
+
+    .first-section .title{
+        font-size: 31px;
+    } 
+    .first-section .input {
+        font-size: 15px;
+    }
+
+    .visit-page .covid-regulations .details{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .covid-regulations .details iframe {
+        margin-top: 20px;
+        width: 90% !important;
+    }
+    .admission-info .content {
+        flex-direction: column;
+    }
+    .visit-page .admission-info .card {
+        width: 90%;
+        margin-bottom: 8px;
+    }
+    .map .details{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .map .details p {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+    .map-preview {
+        width: 90%;
+        background-color: green;
+    }
+}
+@media screen and (max-width: 800px) {
+
+   .event-section .grid-container {
+       display: flex;
+       flex-wrap: wrap;
+       align-items: center;
+   }
+   .event-section .grid-item  {
+       display: flex;
+       width: 60%;
+   }
+   .event-section .image {
+       order: 0;
+       width: 100%;
+       max-height: 400px;
+   }
+   .event-section h3 {
+       order: 1;
+   }
+   .event-section .details{
+       order: 2;
+   }
+}
