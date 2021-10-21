@@ -14,12 +14,9 @@
     margin: 0;
     font-family: Acme;
 }
-h1 {
-    font-size: 35px;
-    padding: 12px;
-}
 p{
     font-family: Montserrat;
+    font-size: 14px;
 }
 a{
     text-decoration: none;
@@ -30,7 +27,10 @@ a:hover {
     border-bottom-width:  2px;
     color: gold;
 }
-
+.section-header-title {
+    font-size: 32px;
+    padding: 12px;
+}
 
 .navBar {
     display: flex;
@@ -84,7 +84,6 @@ table td {
     color: white;
 }
 
-
 .first-section {
     display: flex;
     flex-direction: column;
@@ -100,9 +99,10 @@ table td {
     align-items: center;
 }
 
-.first-section .title {
+.main-title {
     color: white;
-    font-size: 37px;
+    padding-left: 12px;
+    font-size: 35px;
 }
 .first-section .input {
     border-width: 2px;
@@ -254,19 +254,25 @@ background-image: linear-gradient( rgba(255, 255, 255,0),
 }
 .email-section .card {
     display: flex;
+    padding: 0px;
     height: 150px;
-    width: 500px;
+    width: 60%;
     background-color: gold;
 }
 .email-section .card .title {
     background-color: rgb(240,240,240);
-    font-size: 25px;
+    font-size: 32px;
     padding: 10px;
     text-align: center;
+    display: flex;
+    flex: 0.4;
+    align-items: center;
+    justify-content: center;
 }
 .email-section .card .content {
     padding: 10px;
-    font-size: 19px;
+    font-size: 16px;
+    flex: 0.5;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -538,6 +544,8 @@ position: relative;
      display: flex;
      flex-direction: column;
      justify-content: space-evenly;
+     align-items: center;
+     text-align: center;
  }
 .donate-section .details input {
     padding: 8px;
@@ -553,6 +561,10 @@ position: relative;
     color: white;
 }
 @media screen and (max-width: 700px) {
+    
+    p {
+        font-size: 12px;
+    }
     nav{
         display: none;
     }
@@ -565,12 +577,27 @@ position: relative;
     .Menu:hover {
         visibility: visible;
     }
+    .section-header-title {
+        font-size: 26px;
+    }
 
-    .first-section .title{
-        font-size: 31px;
+    .main-title{
+        font-size: 30px;
     } 
     .first-section .input {
         font-size: 15px;
+    }
+    
+    .email-section .card {
+        width: 90%;
+    }
+
+    .selected-arts-section .art-item {
+        flex-direction: column;
+        max-height: 800px;
+    }
+    .selected-arts-section .preview {
+        max-width: 100%;
     }
 
     .visit-page .covid-regulations .details{
@@ -602,6 +629,22 @@ position: relative;
         width: 90%;
         background-color: green;
     }
+
+    .contact-section .card{
+        width: 80%;
+    }
+    .contact-section label {
+        font-size: 16px;
+    }
+    .contact-section input {
+        font-size: 12px;
+    }
+    .donate-section {
+        flex-direction: column;
+    }
+    .donate-section .details {
+        align-self: center;
+    }
 }
 @media screen and (max-width: 800px) {
 
@@ -625,4 +668,5 @@ position: relative;
    .event-section .details{
        order: 2;
    }
+
 }
