@@ -42,9 +42,10 @@ a:hover {
     justify-content: space-between;
     color: white;
 }
-.navBar title {
+.navBar .title, .footer .title {
     font-family: Carter cursive;
     font-size: 29px;
+    color: white;
 }
 nav {
     margin-left: 15px;
@@ -305,7 +306,11 @@ background-image: linear-gradient( rgba(255, 255, 255,0),
 
 .footer{
     background-color: black;
-    height: 250px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .exhibition-page .grid-container{
