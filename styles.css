@@ -71,8 +71,10 @@ nav>a {
     right: 0;
     background-color: black;
     visibility: hidden;
-    transition-property: visibility;
+    transition-property: visibility, opacity;
     transition-delay: 450ms;
+    opacity: 0;
+    transition-duration: 500ms;
 }
 table a {
     color: white;
@@ -139,7 +141,13 @@ table td {
     justify-content: space-between;
     background-color: rgb(240,240,240);
     overflow: hidden;
-
+    transition-property: transform;
+    transition-duration: 500ms;
+}
+.event-section .gridItem:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.02,1.02);
 }
 .event-section h3 {
     font-size: 26px;
@@ -170,6 +178,9 @@ table td {
     width: 70px;
     color: white;
     border-width: 0px;
+}
+.gridItem .book-now-button:hover {
+    background-color: tomato;
 }
 .event1 .special-words {
     color: purple;
@@ -319,85 +330,6 @@ background-image: linear-gradient( rgba(255, 255, 255,0),
     justify-content: space-evenly;
 }
 
-.exhibition-page .grid-container{
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 2px;
-}
-.exhibition-page .grid-item {
-    background-color: blue;
-    height: 400px;
-    background-position: center;
-    background-size: cover;
-    border-color: black;
-    border-width: 10px;
-}
-.exhibition-page .exhibition1 {
-    background-image: url(./assets/images/athena.jpg);
-}
-.exhibition-page .exhibition2 {
-    background-image: url(./assets/images/sculpture.jpg);
-}
-.exhibition-page .exhibition3 {
-    background-image: url(./assets/images/sculpture.jpg);
-}
-.exhibition-page .exhibition4 {
-    background-image: url(./assets/images/sculpture.jpg);
-}
-.exhibition-page .exhibition5 {
-    background-image: url(./assets/images/sculpture.jpg);
-}
-.exhibition-page .exhibition6 {
-    background-image: url(./assets/images/sculpture.jpg);
-}
-.exhibition-page .exhibition7 {
-    background-image: url(./assets/images/sculpture.jpg);
-}
-.exhibition-page .exhibition8 {
-    background-image: url(./assets/images/sculpture.jpg);
-}
-.exhibition-page .exhibition9 {
-    background-image: url(./assets/images/sculpture.jpg);
-}
-.exhibition-page .exhibition10 {
-    background-image: url(./assets/images/sculpture.jpg);
-}
-.exhibition-page .grid-item {
-position: relative;
-}
-.exhibition-page .grid-item .details{
-    background-color: white;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-}
-
-.exhibition-page .grid-container .content {   
-    font-size: 32px;
-    color: sienna;
-    padding: 20px;
-
-}
-.exhibition-page .grid-container .details {   
- border-color: black;
- border-width: 10px;
- display: flex;
- flex-direction: column;
- justify-content: space-evenly;
- padding: 10px;
-}
-.exhibition-page .grid-container .details .title {
-    color: black;
-    font-size: 24px;
-    font-weight: bold;
-}
-.exhibition-page .grid-container .details .subtitle {
-    color: #999;
-    font-size: 12px;
-}
-
 @media screen and (max-width: 700px) {
     
     p {
@@ -411,9 +343,11 @@ position: relative;
     }
     .menu-button:hover + .Menu {
        visibility: visible;
+       opacity: 1;
     }
     .Menu:hover {
         visibility: visible;
+        opacity: 1;
     }
     .section-header-title {
         font-size: 26px;
