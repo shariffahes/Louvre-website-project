@@ -1,3 +1,6 @@
+.visit-page .material-icons {
+    visibility: hidden;
+}
 .header{
     display: flex;
     flex-direction: column;
@@ -17,6 +20,8 @@
     width: 50%;
 }
 .title{
+    display: flex;
+    align-items: center;
     letter-spacing: 3px;
     margin: 20px 0px 2px 15px;
     font-size: 28px;
@@ -93,8 +98,11 @@
     height: 100%;
     width: 100%;
 }
-
-@media screen and (max-width: 700px) {
+.icons {
+    margin-left: 10px;
+    font-size: 34px;
+}
+@media screen and (max-width: 600px) {
       .visit-page .covid-regulations .details{
         flex-direction: column;
         justify-content: space-evenly;
@@ -123,5 +131,11 @@
     .map-preview {
         width: 90%;
         background-color: green;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .visit-page .material-icons {
+        visibility: visible;
     }
 }
